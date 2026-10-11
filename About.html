@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>О мастерской — RBcustom</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0E1116}
+a{color:#F2B544}a:hover{color:#FFD27A}
+input::placeholder{color:#6F7886}
+</style>
+
+</head>
+<body>
+<template id="page">
+
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #E9ECF1; background: #0E1116; line-height: 1.55;">
+
+
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #E9ECF1; background: #0E1116;">
+<div style="background: #F2B544; color: #1A1406; font-size: 13px; font-weight: 600; text-align: center; padding: 7px 16px;">Прототип. Цифры, цены, кейсы и отзывы — тестовые. Фото — Unsplash</div>
+<header style="border-bottom: 1px solid #222833;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px;">
+<a href="Main.html" style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px; color: #FFFFFF; text-decoration: none; letter-spacing: -0.02em;">RB<span style="color: #F2B544;">custom</span></a>
+<nav aria-label="Основное меню" style="display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; flex-grow: 1;">
+<a href="Repair.html" style="color: #C9CFD8; text-decoration: none;">Ремонт фар</a>
+<a href="Upgrade.html" style="color: #C9CFD8; text-decoration: none;">Улучшение света</a>
+<a href="Prices.html" style="color: #C9CFD8; text-decoration: none;">Цены</a>
+<a href="Cases.html" style="color: #C9CFD8; text-decoration: none;">Работы</a>
+<a href="Mail.html" style="color: #C9CFD8; text-decoration: none;">Из регионов</a>
+<a href="Business.html" style="color: #C9CFD8; text-decoration: none;">Для бизнеса</a>
+<a href="About.html" style="color: #C9CFD8; text-decoration: none;">О нас</a>
+</nav>
+<a href="tel:+79117571001" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">+7 (911) 757-10-01</a>
+<a href="Quote.html" style="background: #F2B544; color: #1A1406; text-decoration: none; font-weight: 700; padding: 12px 20px; border-radius: 10px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center;">Оценить по фото</a>
+</div>
+</header>
+</div>
+
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 56px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+<div style="flex: 999 1 520px; min-width: 0;">
+<div style="font-size: 14px; color: #8A93A1; margin-bottom: 16px;"><a href="Main.html" style="color: #8A93A1;">Главная</a> / О мастерской</div>
+<h1 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 44px; line-height: 1.1; letter-spacing: -0.03em; margin: 0 0 18px; color: #FFFFFF;">Мастерская, которая чинит то, что дилер меняет</h1>
+<p style="font-size: 18px; color: #B7BFCB; margin: 0;">RBcustom с 2017 года занимается только автомобильным светом. Мы не продаём «тюнинг ради тюнинга» — возвращаем фарам заводской свет и делаем его лучше, если это законно.</p>
+</div>
+<img src="img/shop.jpg" alt="Мастерская RBcustom" style="flex: 1 1 420px; min-width: 0; width: 100%; height: 400px; object-fit: cover; border-radius: 22px;">
+</section>
+
+<section style="background: #12161D; border-top: 1px solid #1E242E; border-bottom: 1px solid #1E242E;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+<template data-for="stats" data-as="s">
+<div><div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 38px; color: #F2B544;">{{s.v}}</div><div style="color: #C9CFD8;">{{s.k}}</div></div>
+</template>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 64px 24px;">
+<h2 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 30px; margin: 0 0 24px; color: #FFFFFF;">Команда</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;">
+<template data-for="team" data-as="m">
+<div style="background: #181E27; border: 1px solid #262D39; border-radius: 18px; padding: 24px;">
+<div style="width: 64px; height: 64px; border-radius: 50%; background: #262D39; color: #F2B544; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">{{m.ini}}</div>
+<div style="font-weight: 700; color: #FFFFFF; font-size: 18px;">{{m.n}}</div>
+<div style="color: #F2B544; font-size: 14px; margin-bottom: 10px;">{{m.r}}</div>
+<div style="color: #A9B1BD; font-size: 15px;">{{m.d}}</div>
+</div>
+</template>
+</div>
+</section>
+
+<section style="background: #12161D; border-top: 1px solid #1E242E; border-bottom: 1px solid #1E242E;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+<img src="img/mech.jpg" alt="Мастер за работой" style="flex: 1 1 400px; min-width: 0; width: 100%; height: 380px; object-fit: cover; border-radius: 22px;">
+<div style="flex: 999 1 480px; min-width: 0;">
+<h2 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 30px; margin: 0 0 20px; color: #FFFFFF;">Оборудование</h2>
+<template data-for="equip" data-as="e">
+<div style="display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid #262D39;"><span style="color: #F2B544; font-weight: 700;">—</span><div><div style="color: #FFFFFF; font-weight: 600;">{{e.t}}</div><div style="color: #A9B1BD; font-size: 15px;">{{e.d}}</div></div></div>
+</template>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 64px 24px;">
+<div style="display: flex; flex-wrap: wrap; gap: 32px;">
+<div style="flex: 1 1 480px; min-width: 0; background: #181E27; border: 1px solid #262D39; border-radius: 22px; padding: 30px;">
+<h2 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 24px; margin: 0 0 8px; color: #FFFFFF;">Проверить гарантию</h2>
+<p style="color: #A9B1BD; margin: 0 0 18px;">Номер есть в сертификате, который мы выдаём после ремонта. Попробуйте <b style="color: #FFFFFF;">RB-2026-0218</b>.</p>
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; color: #C9CFD8; font-size: 14px;">Номер сертификата
+<input type="text" value="{{cert}}" onInput="{{setCert}}" placeholder="RB-2026-0000" style="background: #0E1116; border: 1px solid #39414F; border-radius: 10px; padding: 12px; color: #FFFFFF; font: inherit; font-size: 16px; min-height: 46px; box-sizing: border-box;"></label>
+<button type="button" onClick="{{check}}" style="align-self: flex-end; min-height: 46px; padding: 10px 22px; border-radius: 10px; border: none; background: #F2B544; color: #1A1406; font: inherit; font-weight: 700; cursor: pointer;">Проверить</button>
+</div>
+<div aria-live="polite">
+<template data-if="ok">
+<div style="margin-top: 18px; background: #12261A; border: 1px solid #2F6B43; border-radius: 14px; padding: 16px 18px; color: #C9E8D2;">
+<div style="font-weight: 700; color: #7FD18B; margin-bottom: 6px;">✓ Гарантия действует</div>
+<div>Haval Jolion 2022 · ремонт секции ДХО, левая фара</div>
+<div>Дата ремонта: 18.09.2026 · действует до 18.09.2027</div>
+</div>
+</template>
+<template data-if="bad">
+<div style="margin-top: 18px; background: #2A1717; border: 1px solid #6B2F2F; border-radius: 14px; padding: 16px 18px; color: #F0C9C9;">Сертификат не найден. Проверьте номер или напишите нам — найдём по номеру телефона.</div>
+</template>
+</div>
+</div>
+<div style="flex: 1 1 480px; min-width: 0; background: #181E27; border: 1px solid #262D39; border-radius: 22px; padding: 30px;">
+<h2 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 24px; margin: 0 0 8px; color: #FFFFFF;">Школа фар</h2>
+<p style="color: #A9B1BD; margin: 0 0 16px;">Учим мастеров из регионов: 5 дней практики, 3 фары своими руками, поставщики и поддержка в чате.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 18px; color: #C9CFD8;"><div><b style="color: #FFFFFF; font-size: 20px;">86</b><br>выпускников</div><div><b style="color: #FFFFFF; font-size: 20px;">34</b><br>города</div><div><b style="color: #FFFFFF; font-size: 20px;">65 000 ₽</b><br>курс</div></div>
+<a href="Quote.html" style="font-weight: 700;">Узнать даты ближайшего потока →</a>
+</div>
+</div>
+</section>
+
+<section style="background: #12161D; border-top: 1px solid #1E242E;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 72px;">
+<h2 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 30px; margin: 0 0 24px; color: #FFFFFF;">Контакты</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px;">
+<template data-for="places" data-as="p">
+<div style="background: #181E27; border: 1px solid #262D39; border-radius: 18px; padding: 24px;">
+<div style="color: #F2B544; font-size: 14px; font-weight: 700; margin-bottom: 6px;">{{p.tag}}</div>
+<div style="font-weight: 700; color: #FFFFFF; font-size: 18px; margin-bottom: 8px;">{{p.addr}}</div>
+<div style="color: #A9B1BD; font-size: 15px; margin-bottom: 4px;">{{p.hours}}</div>
+<div style="color: #A9B1BD; font-size: 15px;">{{p.how}}</div>
+</div>
+</template>
+<div style="background: #181E27; border: 1px solid #262D39; border-radius: 18px; padding: 24px;">
+<div style="color: #F2B544; font-size: 14px; font-weight: 700; margin-bottom: 6px;">Связь</div>
+<div style="font-weight: 700; color: #FFFFFF; font-size: 22px; margin-bottom: 8px;">+7 (812) 000-00-00</div>
+<div style="color: #A9B1BD; font-size: 15px;">Telegram и WhatsApp — тот же номер</div>
+<div style="color: #A9B1BD; font-size: 15px;">hello@rbcustom.ru</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<footer style="font-family: 'Manrope', system-ui, sans-serif; background: #0A0D11; color: #A9B1BD; border-top: 1px solid #222833;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; font-size: 15px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<a href="Main.html" style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px; color: #FFFFFF; text-decoration: none;">RB<span style="color: #F2B544;">custom</span></a>
+<div>Мастерская по ремонту и улучшению автомобильной оптики. Санкт-Петербург, с 2019 года.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Ремонт</div>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Запотевает фара</a>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Трещина, ДТП</a>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Не горит LED и ДХО</a>
+<a href="Model.html" style="color: #A9B1BD; text-decoration: none;">Ремонт по маркам</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Компания</div>
+<a href="Upgrade.html" style="color: #A9B1BD; text-decoration: none;">Улучшение света</a>
+<a href="Mail.html" style="color: #A9B1BD; text-decoration: none;">Фары почтой</a>
+<a href="Business.html" style="color: #A9B1BD; text-decoration: none;">Для бизнеса</a>
+<a href="About.html" style="color: #A9B1BD; text-decoration: none;">Проверить гарантию</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Контакты</div>
+<a href="tel:+79117571001" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">+7 (911) 757-10-01</a>
+<div>пер. Детский, 5Д · м. Московские Ворота</div>
+<div>Пн–Сб 10:00–20:00</div>
+<a href="Quote.html" style="color: #F2B544; font-weight: 700;">Прислать фото фары</a>
+</div>
+</div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px 28px; border-top: 1px solid #1B2029; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13px; color: #7E8794;">
+<div>ИП Родионов И. Г. · ИНН 614881501717</div>
+<div>Политика обработки персональных данных · Публичная оферта</div>
+<div>Фото на сайте: Unsplash (тестовые)</div>
+</div>
+</footer>
+
+</div>
+</template>
+<div id="root"></div>
+<script>
+
+class DCLogic{constructor(p){this.props=p||{};this.state={}}setState(o){Object.assign(this.state,o);if(!window.__noRender)render()}}
+const get=(p,s)=>{p=p.trim();if(p==='true')return true;if(p==='false')return false;return p.split('.').reduce((o,k)=>o==null?o:o[k],s)};
+const one=/^\{\{\s*([\w.]+)\s*\}\}$/;
+const interp=(t,s)=>t.replace(/\{\{\s*([\w.]+)\s*\}\}/g,(m,p)=>{const v=get(p,s);return v==null?'':v});
+function walk(src,s,out){for(const n of src.childNodes){
+ if(n.nodeType===3){out.appendChild(document.createTextNode(n.data.includes('{{')?interp(n.data,s):n.data));continue}
+ if(n.nodeType!==1)continue;
+ if(n.tagName==='TEMPLATE'&&n.dataset.for!==undefined){const list=get(n.dataset.for,s)||[];for(const it of list){walk(n.content,Object.assign({},s,{[n.dataset.as]:it}),out)}continue}
+ if(n.tagName==='TEMPLATE'&&n.dataset.if!==undefined){if(get(n.dataset.if,s))walk(n.content,s,out);continue}
+ const el=document.createElement(n.tagName.toLowerCase());
+ for(const a of n.attributes){const m=a.value.match(one);
+  if(a.name.startsWith('on')&&m){const fn=get(m[1],s);const ev=a.name.slice(2);if(typeof fn==='function'){el.addEventListener(ev==='change'?'change':ev,e=>{if(ev==='input'){window.__noRender=true;fn(e);window.__noRender=false}else fn(e)})}continue}
+  if(a.name.startsWith('hint-'))continue;
+  el.setAttribute(a.name,a.value.includes('{{')?interp(a.value,s):a.value)}
+ walk(n.content||n,s,el);
+ if(el.tagName==='INPUT'&&el.hasAttribute('value'))el.value=el.getAttribute('value');
+ out.appendChild(el)}}
+let comp;
+function render(){const root=document.getElementById('root');const sels=[...root.querySelectorAll('select')].map(x=>x.value);const y=window.scrollY;
+ const frag=document.createDocumentFragment();walk(document.getElementById('page').content,comp.renderVals(),frag);root.replaceChildren(frag);
+ [...root.querySelectorAll('select')].forEach((x,i)=>{if(sels[i]!==undefined)x.value=sels[i]});window.scrollTo(0,y)}
+
+
+class Component extends DCLogic {
+constructor(p) { super(p); this.state = { cert: '', res: '' }; }
+renderVals() {
+const st = this.state;
+return {
+stats: [{ v: '9 лет', k: 'только автосвет' }, { v: '4 300+', k: 'фар и фонарей отремонтировано' }, { v: '1,2%', k: 'гарантийных возвратов' }, { v: '4,9', k: 'рейтинг на Яндекс Картах, 412 отзывов' }],
+team: [
+{ ini: 'ИР', n: 'Иван', r: 'Основатель, мастер', d: '9 лет в автосвете. Разбирает самые сложные случаи — Matrix и адаптив.' },
+{ ini: 'ДС', n: 'Дмитрий', r: 'Электроника и LED', d: 'Ремонт плат, драйверов и блоков управления.' },
+{ ini: 'АМ', n: 'Артём', r: 'Сборка и герметизация', d: 'Отвечает за то, чтобы фара больше не потела.' },
+{ ini: 'ЕК', n: 'Екатерина', r: 'Администратор', d: 'Оценка по фото, запись и отправки СДЭК.' }
+],
+equip: [
+{ t: 'Печь для вскрытия фар', d: 'Точный нагрев — корпус и стекло не деформируются.' },
+{ t: 'Стенд регулировки света', d: 'Проверяем светотеневую границу по ГОСТ после каждой работы.' },
+{ t: 'Паяльная станция и микроскоп', d: 'Ремонт LED-плат и драйверов.' },
+{ t: 'Камера давления', d: 'Тест герметичности перед выдачей.' },
+{ t: 'Склад запчастей', d: 'Стёкла и модули на 40+ популярных моделей.' }
+],
+cert: st.cert,
+setCert: (e) => this.setState({ cert: e.target.value, res: '' }),
+check: () => this.setState({ res: this.state.cert.trim().toUpperCase() === 'RB-2026-0218' ? 'ok' : 'bad' }),
+ok: st.res === 'ok', bad: st.res === 'bad',
+places: [
+{ tag: 'Мастерская RBcustom', addr: 'Санкт-Петербург, ул. Примерная, 12', hours: 'Пн–Сб 10:00–20:00', how: '5 минут от м. Пример, парковка у ворот' },
+{ tag: 'Детейлинг Alfa Car', addr: 'Санкт-Петербург, пр. Тестовый, 45', hours: 'Ежедневно 9:00–21:00', how: 'Полировка, плёнка, мойка' }
+]
+};
+}
+}
+
+comp=new Component({});render();
+</script>
+</body>
+</html>

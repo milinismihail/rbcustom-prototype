@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Для бизнеса — RBcustom</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0E1116}
+a{color:#F2B544}a:hover{color:#FFD27A}
+</style>
+
+</head>
+<body>
+<template id="page">
+
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #E9ECF1; background: #0E1116; line-height: 1.55;">
+
+
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #E9ECF1; background: #0E1116;">
+<div style="background: #F2B544; color: #1A1406; font-size: 13px; font-weight: 600; text-align: center; padding: 7px 16px;">Прототип. Цифры, цены, кейсы и отзывы — тестовые. Фото — Unsplash</div>
+<header style="border-bottom: 1px solid #222833;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px;">
+<a href="Main.html" style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px; color: #FFFFFF; text-decoration: none; letter-spacing: -0.02em;">RB<span style="color: #F2B544;">custom</span></a>
+<nav aria-label="Основное меню" style="display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; flex-grow: 1;">
+<a href="Repair.html" style="color: #C9CFD8; text-decoration: none;">Ремонт фар</a>
+<a href="Upgrade.html" style="color: #C9CFD8; text-decoration: none;">Улучшение света</a>
+<a href="Prices.html" style="color: #C9CFD8; text-decoration: none;">Цены</a>
+<a href="Cases.html" style="color: #C9CFD8; text-decoration: none;">Работы</a>
+<a href="Mail.html" style="color: #C9CFD8; text-decoration: none;">Из регионов</a>
+<a href="Business.html" style="color: #C9CFD8; text-decoration: none;">Для бизнеса</a>
+<a href="About.html" style="color: #C9CFD8; text-decoration: none;">О нас</a>
+</nav>
+<a href="tel:+79117571001" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">+7 (911) 757-10-01</a>
+<a href="Quote.html" style="background: #F2B544; color: #1A1406; text-decoration: none; font-weight: 700; padding: 12px 20px; border-radius: 10px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center;">Оценить по фото</a>
+</div>
+</header>
+</div>
+
+
+<section style="position: relative; overflow: hidden;">
+<img src="img/dealer.jpg" alt="Ряд автомобилей на площадке" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.35;">
+<div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 88px 24px;">
+<div style="font-size: 14px; color: #C9CFD8; margin-bottom: 18px;"><a href="Main.html" style="color: #C9CFD8;">Главная</a> / Для бизнеса</div>
+<h1 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 48px; line-height: 1.1; letter-spacing: -0.03em; margin: 0 0 18px; color: #FFFFFF; max-width: 860px;">Оптика на потоке: <span style="color: #F2B544;">ремонт вместо замены для вашего бизнеса</span></h1>
+<p style="font-size: 19px; color: #E9ECF1; margin: 0 0 28px; max-width: 640px;">Кузовные цеха, дилеры, перекупщики, автопарки и мастерские. Фиксированный прайс, сроки по договору, забор и доставка, безналичная оплата.</p>
+<a href="#partner" style="background: #F2B544; color: #1A1406; text-decoration: none; font-weight: 700; font-size: 17px; padding: 16px 26px; border-radius: 12px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center;">Получить партнёрский прайс</a>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 56px 24px 0;">
+<div style="display: flex; flex-wrap: wrap; gap: 8px;" role="tablist" aria-label="Тип бизнеса">
+<template data-for="segs" data-as="s">
+<template data-if="s.on"><button type="button" role="tab" aria-selected="true" onClick="{{s.pick}}" style="min-height: 48px; padding: 12px 20px; border-radius: 999px; font: inherit; font-weight: 700; font-size: 16px; cursor: pointer; background: #F2B544; color: #1A1406; border: 1px solid #F2B544;">{{s.label}}</button></template>
+<template data-if="s.off"><button type="button" role="tab" aria-selected="false" onClick="{{s.pick}}" style="min-height: 48px; padding: 12px 20px; border-radius: 999px; font: inherit; font-weight: 700; font-size: 16px; cursor: pointer; background: #161B23; color: #E9ECF1; border: 1px solid #39414F;">{{s.label}}</button></template>
+</template>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 32px 24px 64px; display: flex; flex-wrap: wrap; gap: 32px; align-items: stretch;">
+<img src="{{seg.img}}" alt="{{seg.label}}" style="flex: 1 1 380px; min-width: 0; width: 100%; height: 420px; object-fit: cover; border-radius: 20px;">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+<h2 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 30px; letter-spacing: -0.02em; margin: 0; color: #FFFFFF;">{{seg.h}}</h2>
+<p style="color: #C9CFD8; margin: 0; font-size: 17px;">{{seg.text}}</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px;">
+<template data-for="seg.points" data-as="p">
+<li style="display: flex; gap: 12px; align-items: flex-start;"><span style="flex: 0 0 8px; width: 8px; height: 8px; border-radius: 50%; background: #F2B544; margin-top: 9px;"></span><span style="color: #E9ECF1;">{{p}}</span></li>
+</template>
+</ul>
+<div style="background: #161B23; border: 1px solid #262D39; border-radius: 16px; padding: 18px 20px; margin-top: auto;">
+<div style="font-size: 13px; color: #8A93A1; margin-bottom: 8px;">Пример цен для партнёров</div>
+<template data-for="seg.prices" data-as="r">
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;"><span style="color: #C9CFD8;">{{r.t}}</span><span style="color: #F2B544; font-weight: 700; white-space: nowrap;">{{r.p}}</span></div>
+</template>
+</div>
+</div>
+</section>
+
+<section style="background: #12161D; border-top: 1px solid #1E242E; border-bottom: 1px solid #1E242E;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px;">
+<h2 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 30px; letter-spacing: -0.02em; margin: 0 0 28px; color: #FFFFFF;">Как начинаем работать</h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+<li style="background: #181E27; border: 1px solid #262D39; border-radius: 16px; padding: 22px;"><div style="font-family: 'Unbounded', sans-serif; color: #F2B544; font-size: 26px;">1</div><div style="font-weight: 700; color: #FFFFFF; margin: 6px 0;">Заявка</div><div style="color: #A9B1BD; font-size: 15px;">Вы оставляете контакты и примерный объём в месяц.</div></li>
+<li style="background: #181E27; border: 1px solid #262D39; border-radius: 16px; padding: 22px;"><div style="font-family: 'Unbounded', sans-serif; color: #F2B544; font-size: 26px;">2</div><div style="font-weight: 700; color: #FFFFFF; margin: 6px 0;">Пробный заказ</div><div style="color: #A9B1BD; font-size: 15px;">Первые 2–3 фары со скидкой 20%, чтобы оценить качество.</div></li>
+<li style="background: #181E27; border: 1px solid #262D39; border-radius: 16px; padding: 22px;"><div style="font-family: 'Unbounded', sans-serif; color: #F2B544; font-size: 26px;">3</div><div style="font-weight: 700; color: #FFFFFF; margin: 6px 0;">Договор</div><div style="color: #A9B1BD; font-size: 15px;">Фиксируем прайс, сроки, логистику и порядок оплаты.</div></li>
+<li style="background: #181E27; border: 1px solid #262D39; border-radius: 16px; padding: 22px;"><div style="font-family: 'Unbounded', sans-serif; color: #F2B544; font-size: 26px;">4</div><div style="font-weight: 700; color: #FFFFFF; margin: 6px 0;">Поток</div><div style="color: #A9B1BD; font-size: 15px;">Персональный менеджер, отчёт по заказам раз в месяц.</div></li>
+</ol>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+<div style="border-top: 2px solid #F2B544; padding-top: 16px;"><div style="font-family: 'Unbounded', sans-serif; font-size: 30px; color: #FFFFFF;">18</div><div style="color: #A9B1BD;">партнёров работают по договору</div></div>
+<div style="border-top: 2px solid #F2B544; padding-top: 16px;"><div style="font-family: 'Unbounded', sans-serif; font-size: 30px; color: #FFFFFF;">24 часа</div><div style="color: #A9B1BD;">срок по типовым работам для партнёров</div></div>
+<div style="border-top: 2px solid #F2B544; padding-top: 16px;"><div style="font-family: 'Unbounded', sans-serif; font-size: 30px; color: #FFFFFF;">до 70%</div><div style="color: #A9B1BD;">экономии против покупки новой фары</div></div>
+<div style="border-top: 2px solid #F2B544; padding-top: 16px;"><div style="font-family: 'Unbounded', sans-serif; font-size: 30px; color: #FFFFFF;">Безнал</div><div style="color: #A9B1BD;">закрывающие документы каждый месяц</div></div>
+</section>
+
+<section id="partner" style="background: #12161D; border-top: 1px solid #1E242E;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 72px; display: flex; flex-wrap: wrap; gap: 40px;">
+<div style="flex: 1 1 380px; min-width: 0;">
+<h2 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 30px; letter-spacing: -0.02em; margin: 0 0 14px; color: #FFFFFF;">Партнёрский прайс</h2>
+<p style="color: #A9B1BD; margin: 0 0 20px;">Пришлём прайс под ваш тип бизнеса и объём в течение рабочего дня.</p>
+<div style="color: #C9CFD8;">Менеджер по партнёрам: <b style="color: #FFFFFF;">[ИМЯ]</b><br>+7 (911) 757-10-01 · partners@rbcustom.ru</div>
+</div>
+<form style="flex: 1 1 460px; min-width: 0; background: #161B23; border: 1px solid #262D39; border-radius: 20px; padding: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9CFD8;">Компания<input type="text" placeholder="ООО «Кузовной центр»" style="background: #0E1116; border: 1px solid #39414F; border-radius: 10px; padding: 14px; color: #FFFFFF; font: inherit; font-size: 16px;"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9CFD8;">Тип бизнеса<select style="background: #0E1116; border: 1px solid #39414F; border-radius: 10px; padding: 14px; color: #FFFFFF; font: inherit; font-size: 16px;"><option>Кузовной цех</option><option>Дилер или перекупщик</option><option>Автопарк или такси</option><option>Мастерская</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9CFD8;">Фар в месяц<select style="background: #0E1116; border: 1px solid #39414F; border-radius: 10px; padding: 14px; color: #FFFFFF; font: inherit; font-size: 16px;"><option>до 5</option><option>5–20</option><option>20–50</option><option>больше 50</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9CFD8;">Телефон<input type="tel" placeholder="+7" style="background: #0E1116; border: 1px solid #39414F; border-radius: 10px; padding: 14px; color: #FFFFFF; font: inherit; font-size: 16px;"></label>
+<button type="button" style="grid-column: 1 / -1; background: #F2B544; color: #1A1406; border: 0; border-radius: 12px; padding: 16px; font: inherit; font-weight: 700; font-size: 17px; min-height: 48px; cursor: pointer;">Получить прайс</button>
+</form>
+</div>
+</section>
+
+
+
+<footer style="font-family: 'Manrope', system-ui, sans-serif; background: #0A0D11; color: #A9B1BD; border-top: 1px solid #222833;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; font-size: 15px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<a href="Main.html" style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px; color: #FFFFFF; text-decoration: none;">RB<span style="color: #F2B544;">custom</span></a>
+<div>Мастерская по ремонту и улучшению автомобильной оптики. Санкт-Петербург, с 2019 года.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Ремонт</div>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Запотевает фара</a>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Трещина, ДТП</a>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Не горит LED и ДХО</a>
+<a href="Model.html" style="color: #A9B1BD; text-decoration: none;">Ремонт по маркам</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Компания</div>
+<a href="Upgrade.html" style="color: #A9B1BD; text-decoration: none;">Улучшение света</a>
+<a href="Mail.html" style="color: #A9B1BD; text-decoration: none;">Фары почтой</a>
+<a href="Business.html" style="color: #A9B1BD; text-decoration: none;">Для бизнеса</a>
+<a href="About.html" style="color: #A9B1BD; text-decoration: none;">Проверить гарантию</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Контакты</div>
+<a href="tel:+79117571001" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">+7 (911) 757-10-01</a>
+<div>пер. Детский, 5Д · м. Московские Ворота</div>
+<div>Пн–Сб 10:00–20:00</div>
+<a href="Quote.html" style="color: #F2B544; font-weight: 700;">Прислать фото фары</a>
+</div>
+</div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px 28px; border-top: 1px solid #1B2029; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13px; color: #7E8794;">
+<div>ИП Родионов И. Г. · ИНН 614881501717</div>
+<div>Политика обработки персональных данных · Публичная оферта</div>
+<div>Фото на сайте: Unsplash (тестовые)</div>
+</div>
+</footer>
+
+</div>
+</template>
+<div id="root"></div>
+<script>
+
+class DCLogic{constructor(p){this.props=p||{};this.state={}}setState(o){Object.assign(this.state,o);if(!window.__noRender)render()}}
+const get=(p,s)=>{p=p.trim();if(p==='true')return true;if(p==='false')return false;return p.split('.').reduce((o,k)=>o==null?o:o[k],s)};
+const one=/^\{\{\s*([\w.]+)\s*\}\}$/;
+const interp=(t,s)=>t.replace(/\{\{\s*([\w.]+)\s*\}\}/g,(m,p)=>{const v=get(p,s);return v==null?'':v});
+function walk(src,s,out){for(const n of src.childNodes){
+ if(n.nodeType===3){out.appendChild(document.createTextNode(n.data.includes('{{')?interp(n.data,s):n.data));continue}
+ if(n.nodeType!==1)continue;
+ if(n.tagName==='TEMPLATE'&&n.dataset.for!==undefined){const list=get(n.dataset.for,s)||[];for(const it of list){walk(n.content,Object.assign({},s,{[n.dataset.as]:it}),out)}continue}
+ if(n.tagName==='TEMPLATE'&&n.dataset.if!==undefined){if(get(n.dataset.if,s))walk(n.content,s,out);continue}
+ const el=document.createElement(n.tagName.toLowerCase());
+ for(const a of n.attributes){const m=a.value.match(one);
+  if(a.name.startsWith('on')&&m){const fn=get(m[1],s);const ev=a.name.slice(2);if(typeof fn==='function'){el.addEventListener(ev==='change'?'change':ev,e=>{if(ev==='input'){window.__noRender=true;fn(e);window.__noRender=false}else fn(e)})}continue}
+  if(a.name.startsWith('hint-'))continue;
+  el.setAttribute(a.name,a.value.includes('{{')?interp(a.value,s):a.value)}
+ walk(n.content||n,s,el);
+ if(el.tagName==='INPUT'&&el.hasAttribute('value'))el.value=el.getAttribute('value');
+ out.appendChild(el)}}
+let comp;
+function render(){const root=document.getElementById('root');const sels=[...root.querySelectorAll('select')].map(x=>x.value);const y=window.scrollY;
+ const frag=document.createDocumentFragment();walk(document.getElementById('page').content,comp.renderVals(),frag);root.replaceChildren(frag);
+ [...root.querySelectorAll('select')].forEach((x,i)=>{if(sels[i]!==undefined)x.value=sels[i]});window.scrollTo(0,y)}
+
+
+class Component extends DCLogic {
+constructor(p) { super(p); this.state = { s: 0 }; }
+renderVals() {
+const S = [
+{ label: 'Кузовные цеха', img: 'img/mech.jpg', h: 'Фары после ДТП — ремонт вместо замены', text: 'Вы получаете фару, которая выглядит и светит как новая, а клиент экономит. Забираем фары курьером и возвращаем в срок.', points: ['Забор и доставка по Петербургу бесплатно от 3 фар', 'Срок 24–48 часов по типовым работам', 'Фото до и после для отчёта страховой', 'Гарантия 2 года на нашу работу'], prices: [{ t: 'Замена стекла фары', p: 'от 6 500 ₽' }, { t: 'Ремонт креплений', p: 'от 2 000 ₽' }, { t: 'Переборка на новом герметике', p: 'от 5 000 ₽' }] },
+{ label: 'Дилеры и перекупщики', img: 'img/dealer.jpg', h: 'Предпродажная подготовка оптики', text: 'Мутные и потеющие фары снижают цену машины. Пакет подготовки за фиксированную цену возвращает «свежий» вид.', points: ['Пакет «фары + ДХО + полировка» по одной цене', 'Выезд на площадку при 5+ машинах', 'Срок 24 часа', 'Отчёт с фото для объявления'], prices: [{ t: 'Полировка и лак, пара фар', p: '2 400 ₽' }, { t: 'Пакет предпродажный', p: 'от 6 900 ₽' }, { t: 'Ремонт запотевания', p: 'от 5 000 ₽' }] },
+{ label: 'Автопарки и такси', img: 'img/truck.jpg', h: 'Обменный фонд — машина не простаивает', text: 'Держим восстановленные фары на популярные модели парков. Меняем за час, вашу фару восстанавливаем и возвращаем в фонд.', points: ['Обмен за 1 час на популярные модели', 'Абонентское обслуживание оптики парка', 'Регулировка света по ГОСТ к техосмотру', 'Оплата по счёту раз в месяц'], prices: [{ t: 'Обмен фары из фонда', p: 'от 7 500 ₽' }, { t: 'Регулировка света', p: '700 ₽' }, { t: 'Абонемент на 10 машин', p: 'по запросу' }] },
+{ label: 'Мастерские', img: 'img/board.jpg', h: 'Сложные работы на субподряд', text: 'Для студий и сервисов из Петербурга и регионов: берём то, на что у вас нет оборудования или опыта.', points: ['Ремонт LED-плат и драйверов', 'Восстановление отражателей', 'Редкие стёкла и корпуса', 'Приём по почте со всей России'], prices: [{ t: 'Ремонт LED-платы', p: 'от 7 000 ₽' }, { t: 'Восстановление отражателя', p: 'от 6 000 ₽' }, { t: 'Консультация мастера', p: 'бесплатно' }] }
+];
+return {
+segs: S.map((x, i) => ({ label: x.label, on: i === this.state.s, off: i !== this.state.s, pick: () => this.setState({ s: i }) })),
+seg: S[this.state.s]
+};
+}
+}
+
+comp=new Component({});render();
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Работы — RBcustom</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0E1116}
+a{color:#F2B544}a:hover{color:#FFD27A}
+</style>
+
+</head>
+<body>
+<template id="page">
+
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #E9ECF1; background: #0E1116; line-height: 1.55;">
+
+
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #E9ECF1; background: #0E1116;">
+<div style="background: #F2B544; color: #1A1406; font-size: 13px; font-weight: 600; text-align: center; padding: 7px 16px;">Прототип. Цифры, цены, кейсы и отзывы — тестовые. Фото — Unsplash</div>
+<header style="border-bottom: 1px solid #222833;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px;">
+<a href="Main.html" style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px; color: #FFFFFF; text-decoration: none; letter-spacing: -0.02em;">RB<span style="color: #F2B544;">custom</span></a>
+<nav aria-label="Основное меню" style="display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; flex-grow: 1;">
+<a href="Repair.html" style="color: #C9CFD8; text-decoration: none;">Ремонт фар</a>
+<a href="Upgrade.html" style="color: #C9CFD8; text-decoration: none;">Улучшение света</a>
+<a href="Prices.html" style="color: #C9CFD8; text-decoration: none;">Цены</a>
+<a href="Cases.html" style="color: #C9CFD8; text-decoration: none;">Работы</a>
+<a href="Mail.html" style="color: #C9CFD8; text-decoration: none;">Из регионов</a>
+<a href="Business.html" style="color: #C9CFD8; text-decoration: none;">Для бизнеса</a>
+<a href="About.html" style="color: #C9CFD8; text-decoration: none;">О нас</a>
+</nav>
+<a href="tel:+79117571001" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">+7 (911) 757-10-01</a>
+<a href="Quote.html" style="background: #F2B544; color: #1A1406; text-decoration: none; font-weight: 700; padding: 12px 20px; border-radius: 10px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center;">Оценить по фото</a>
+</div>
+</header>
+</div>
+
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 24px;">
+<div style="font-size: 14px; color: #8A93A1; margin-bottom: 16px;"><a href="Main.html" style="color: #8A93A1;">Главная</a> / Работы</div>
+<h1 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 44px; letter-spacing: -0.03em; margin: 0 0 12px; color: #FFFFFF;">Работы: 240 фар и фонарей</h1>
+<p style="font-size: 18px; color: #B7BFCB; margin: 0;">Каждая работа — задача, решение, цена и срок. Найдите машину, похожую на вашу.</p>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 8px 24px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end;">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; flex: 999 1 560px;" role="radiogroup" aria-label="Тип работы">
+<template data-for="chips" data-as="c">
+<template data-if="c.on"><button type="button" role="radio" aria-checked="true" onClick="{{c.pick}}" style="min-height: 44px; padding: 10px 16px; border-radius: 999px; font: inherit; font-weight: 700; font-size: 15px; cursor: pointer; background: #F2B544; color: #1A1406; border: 1px solid #F2B544;">{{c.label}}</button></template>
+<template data-if="c.off"><button type="button" role="radio" aria-checked="false" onClick="{{c.pick}}" style="min-height: 44px; padding: 10px 16px; border-radius: 999px; font: inherit; font-weight: 700; font-size: 15px; cursor: pointer; background: #161B23; color: #E9ECF1; border: 1px solid #39414F;">{{c.label}}</button></template>
+</template>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #C9CFD8; flex: 1 1 220px;">Марка
+<select onChange="{{setBrand}}" style="background: #161B23; border: 1px solid #39414F; border-radius: 10px; padding: 12px; color: #FFFFFF; font: inherit; font-size: 16px; min-height: 46px;">
+<template data-for="brandOpts" data-as="b"><option value="{{b}}">{{b}}</option></template>
+</select></label>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 0 24px 72px;">
+<div style="color: #8A93A1; font-size: 15px; margin-bottom: 18px;" aria-live="polite">Показано работ: {{count}}</div>
+<template data-if="empty">
+<div style="background: #161B23; border: 1px solid #262D39; border-radius: 16px; padding: 32px; text-align: center; color: #C9CFD8;">По этому фильтру работ пока нет. <a href="Quote.html">Пришлите фото</a> — сделаем первой.</div>
+</template>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px;">
+<template data-for="items" data-as="c">
+<a href="Case.html" style="text-decoration: none; background: #181E27; border: 1px solid #262D39; border-radius: 16px; overflow: hidden; display: block;">
+<img src="{{c.img}}" alt="{{c.car}}" style="width: 100%; height: 190px; object-fit: cover; display: block;">
+<div style="padding: 16px 18px 20px;">
+<div style="font-size: 13px; color: #F2B544; font-weight: 700; margin-bottom: 6px;">{{c.tagLabel}}</div>
+<div style="font-weight: 700; font-size: 18px; color: #FFFFFF; margin-bottom: 6px;">{{c.car}}</div>
+<div style="font-size: 15px; color: #A9B1BD; margin-bottom: 12px;">{{c.text}}</div>
+<div style="display: flex; gap: 18px; font-size: 14px; color: #C9CFD8;"><span>{{c.price}}</span><span>{{c.time}}</span></div>
+</div>
+</a>
+</template>
+</div>
+<div style="text-align: center; margin-top: 32px;"><button type="button" style="min-height: 48px; padding: 12px 28px; border-radius: 12px; font: inherit; font-weight: 700; cursor: pointer; background: transparent; color: #FFFFFF; border: 1px solid #39414F;">Показать ещё</button></div>
+</section>
+
+
+
+<footer style="font-family: 'Manrope', system-ui, sans-serif; background: #0A0D11; color: #A9B1BD; border-top: 1px solid #222833;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; font-size: 15px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<a href="Main.html" style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px; color: #FFFFFF; text-decoration: none;">RB<span style="color: #F2B544;">custom</span></a>
+<div>Мастерская по ремонту и улучшению автомобильной оптики. Санкт-Петербург, с 2019 года.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Ремонт</div>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Запотевает фара</a>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Трещина, ДТП</a>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Не горит LED и ДХО</a>
+<a href="Model.html" style="color: #A9B1BD; text-decoration: none;">Ремонт по маркам</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Компания</div>
+<a href="Upgrade.html" style="color: #A9B1BD; text-decoration: none;">Улучшение света</a>
+<a href="Mail.html" style="color: #A9B1BD; text-decoration: none;">Фары почтой</a>
+<a href="Business.html" style="color: #A9B1BD; text-decoration: none;">Для бизнеса</a>
+<a href="About.html" style="color: #A9B1BD; text-decoration: none;">Проверить гарантию</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Контакты</div>
+<a href="tel:+79117571001" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">+7 (911) 757-10-01</a>
+<div>пер. Детский, 5Д · м. Московские Ворота</div>
+<div>Пн–Сб 10:00–20:00</div>
+<a href="Quote.html" style="color: #F2B544; font-weight: 700;">Прислать фото фары</a>
+</div>
+</div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px 28px; border-top: 1px solid #1B2029; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13px; color: #7E8794;">
+<div>ИП Родионов И. Г. · ИНН 614881501717</div>
+<div>Политика обработки персональных данных · Публичная оферта</div>
+<div>Фото на сайте: Unsplash (тестовые)</div>
+</div>
+</footer>
+
+</div>
+</template>
+<div id="root"></div>
+<script>
+
+class DCLogic{constructor(p){this.props=p||{};this.state={}}setState(o){Object.assign(this.state,o);if(!window.__noRender)render()}}
+const get=(p,s)=>{p=p.trim();if(p==='true')return true;if(p==='false')return false;return p.split('.').reduce((o,k)=>o==null?o:o[k],s)};
+const one=/^\{\{\s*([\w.]+)\s*\}\}$/;
+const interp=(t,s)=>t.replace(/\{\{\s*([\w.]+)\s*\}\}/g,(m,p)=>{const v=get(p,s);return v==null?'':v});
+function walk(src,s,out){for(const n of src.childNodes){
+ if(n.nodeType===3){out.appendChild(document.createTextNode(n.data.includes('{{')?interp(n.data,s):n.data));continue}
+ if(n.nodeType!==1)continue;
+ if(n.tagName==='TEMPLATE'&&n.dataset.for!==undefined){const list=get(n.dataset.for,s)||[];for(const it of list){walk(n.content,Object.assign({},s,{[n.dataset.as]:it}),out)}continue}
+ if(n.tagName==='TEMPLATE'&&n.dataset.if!==undefined){if(get(n.dataset.if,s))walk(n.content,s,out);continue}
+ const el=document.createElement(n.tagName.toLowerCase());
+ for(const a of n.attributes){const m=a.value.match(one);
+  if(a.name.startsWith('on')&&m){const fn=get(m[1],s);const ev=a.name.slice(2);if(typeof fn==='function'){el.addEventListener(ev==='change'?'change':ev,e=>{if(ev==='input'){window.__noRender=true;fn(e);window.__noRender=false}else fn(e)})}continue}
+  if(a.name.startsWith('hint-'))continue;
+  el.setAttribute(a.name,a.value.includes('{{')?interp(a.value,s):a.value)}
+ walk(n.content||n,s,el);
+ if(el.tagName==='INPUT'&&el.hasAttribute('value'))el.value=el.getAttribute('value');
+ out.appendChild(el)}}
+let comp;
+function render(){const root=document.getElementById('root');const sels=[...root.querySelectorAll('select')].map(x=>x.value);const y=window.scrollY;
+ const frag=document.createDocumentFragment();walk(document.getElementById('page').content,comp.renderVals(),frag);root.replaceChildren(frag);
+ [...root.querySelectorAll('select')].forEach((x,i)=>{if(sels[i]!==undefined)x.value=sels[i]});window.scrollTo(0,y)}
+
+
+class Component extends DCLogic {
+constructor(p) { super(p); this.state = { tag: 'all', brand: 'Все марки' }; }
+renderVals() {
+const I = { hero: 'img/hero.jpg', hl1: 'img/hl1.jpg', hl2: 'img/hl2.jpg', hl3: 'img/hl3.jpg', hl4: 'img/hl4.jpg', old: 'img/old.jpg', tail1: 'img/tail1.jpg', tail2: 'img/tail2.jpg', board: 'img/board.jpg' };
+const L = { fog: 'Запотевание', dtp: 'После ДТП', led: 'LED и фонари', up: 'Улучшение света', pol: 'Полировка', mail: 'По почте' };
+const A = [
+{ tag: 'fog', brand: 'Toyota', car: 'Toyota RAV4 2020', text: 'Потела правая фара после каждой мойки.', price: '7 500 ₽', time: '1 день', img: I.hl1 },
+{ tag: 'led', brand: 'Haval', car: 'Haval Jolion 2022', text: 'Погасла половина ДХО, заменили диоды и драйвер.', price: '11 500 ₽', time: '1 день', img: I.hl4 },
+{ tag: 'dtp', brand: 'Geely', car: 'Geely Monjaro 2023', text: 'Сломаны крепления и трещина стекла.', price: '14 000 ₽', time: '2 дня', img: I.hl3 },
+{ tag: 'led', brand: 'Zeekr', car: 'Zeekr 001', text: 'Не горела секция заднего фонаря.', price: '18 000 ₽', time: '2 дня', img: I.tail2 },
+{ tag: 'up', brand: 'Mitsubishi', car: 'Mitsubishi Outlander 2016', text: 'Bi-LED с сертификатом вместо выгоревших линз.', price: '32 000 ₽', time: '1 день', img: I.hl2 },
+{ tag: 'mail', brand: 'Lexus', car: 'Lexus RX 2018, Мурманск', text: 'Новое стекло и отражатель, возврат за 6 дней.', price: '19 000 ₽', time: '6 дней', img: I.hero },
+{ tag: 'pol', brand: 'Kia', car: 'Kia Rio 2017', text: 'Мутные фары: шлифовка, полировка, лак.', price: '3 000 ₽', time: '3 часа', img: I.old },
+{ tag: 'led', brand: 'Lixiang', car: 'Lixiang L7 2023', text: 'Ремонт LED-платы фонаря без замены.', price: '16 000 ₽', time: '2 дня', img: I.tail1 },
+{ tag: 'fog', brand: 'Hyundai', car: 'Hyundai Tucson 2019', text: 'Вода в фаре после трещины корпуса.', price: '9 500 ₽', time: '1 день', img: I.hl2 },
+{ tag: 'led', brand: 'BMW', car: 'BMW X5 G05', text: 'Не горел адаптивный модуль, ремонт драйвера.', price: '38 000 ₽', time: '3 дня', img: I.board },
+{ tag: 'dtp', brand: 'Chery', car: 'Chery Tiggo 7 Pro 2022', text: 'Трещина стекла после камня на трассе.', price: '12 000 ₽', time: '2 дня', img: I.hl3 },
+{ tag: 'up', brand: 'Toyota', car: 'Toyota Camry 2015', text: 'Замена ксеноновых линз, регулировка по ГОСТ.', price: '26 000 ₽', time: '1 день', img: I.hero }
+];
+const brands = ['Все марки'].concat(Array.from(new Set(A.map((a) => a.brand))).sort());
+const items = A.filter((a) => (this.state.tag === 'all' || a.tag === this.state.tag) && (this.state.brand === 'Все марки' || a.brand === this.state.brand)).map((a) => Object.assign({}, a, { tagLabel: L[a.tag] }));
+const chipsSrc = [['all', 'Все']].concat(Object.keys(L).map((k) => [k, L[k]]));
+return {
+chips: chipsSrc.map(([k, l]) => ({ label: l, on: this.state.tag === k, off: this.state.tag !== k, pick: () => this.setState({ tag: k }) })),
+brandOpts: brands,
+setBrand: (e) => this.setState({ brand: e.target.value }),
+items, count: items.length, empty: items.length === 0
+};
+}
+}
+
+comp=new Component({});render();
+</script>
+</body>
+</html>

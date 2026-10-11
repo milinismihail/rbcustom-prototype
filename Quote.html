@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Оценка по фото — RBcustom</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0E1116}
+a{color:#F2B544}a:hover{color:#FFD27A}
+input::placeholder{color:#6F7886}
+</style>
+
+</head>
+<body>
+<template id="page">
+
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #E9ECF1; background: #0E1116; line-height: 1.55;">
+
+
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #E9ECF1; background: #0E1116;">
+<div style="background: #F2B544; color: #1A1406; font-size: 13px; font-weight: 600; text-align: center; padding: 7px 16px;">Прототип. Цифры, цены, кейсы и отзывы — тестовые. Фото — Unsplash</div>
+<header style="border-bottom: 1px solid #222833;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px;">
+<a href="Main.html" style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px; color: #FFFFFF; text-decoration: none; letter-spacing: -0.02em;">RB<span style="color: #F2B544;">custom</span></a>
+<nav aria-label="Основное меню" style="display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; flex-grow: 1;">
+<a href="Repair.html" style="color: #C9CFD8; text-decoration: none;">Ремонт фар</a>
+<a href="Upgrade.html" style="color: #C9CFD8; text-decoration: none;">Улучшение света</a>
+<a href="Prices.html" style="color: #C9CFD8; text-decoration: none;">Цены</a>
+<a href="Cases.html" style="color: #C9CFD8; text-decoration: none;">Работы</a>
+<a href="Mail.html" style="color: #C9CFD8; text-decoration: none;">Из регионов</a>
+<a href="Business.html" style="color: #C9CFD8; text-decoration: none;">Для бизнеса</a>
+<a href="About.html" style="color: #C9CFD8; text-decoration: none;">О нас</a>
+</nav>
+<a href="tel:+79117571001" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">+7 (911) 757-10-01</a>
+<a href="Quote.html" style="background: #F2B544; color: #1A1406; text-decoration: none; font-weight: 700; padding: 12px 20px; border-radius: 10px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center;">Оценить по фото</a>
+</div>
+</header>
+</div>
+
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 72px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+<div style="flex: 999 1 640px; min-width: 0;">
+<h1 style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 40px; letter-spacing: -0.03em; margin: 0 0 10px; color: #FFFFFF;">Оценка по фото за 15 минут</h1>
+<p style="font-size: 17px; color: #B7BFCB; margin: 0 0 28px;">Четыре коротких шага. Мастер посмотрит фото и пришлёт точную цену и срок.</p>
+
+<template data-if="notDone">
+<div style="display: flex; gap: 8px; margin-bottom: 24px;" aria-label="Прогресс">
+<template data-for="bar" data-as="b">
+<div style="flex: 1 1 0; min-width: 0;">
+<template data-if="b.on"><div style="height: 6px; border-radius: 3px; background: #F2B544;"></div></template>
+<template data-if="b.off"><div style="height: 6px; border-radius: 3px; background: #262D39;"></div></template>
+<div style="font-size: 13px; color: #8A93A1; margin-top: 6px;">{{b.label}}</div>
+</div>
+</template>
+</div>
+</template>
+
+<div style="background: #181E27; border: 1px solid #262D39; border-radius: 22px; padding: 30px;">
+
+<template data-if="s0">
+<h2 style="font-family: 'Unbounded', sans-serif; font-size: 22px; margin: 0 0 18px; color: #FFFFFF;">Что случилось?</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px;" role="radiogroup">
+<template data-for="probs" data-as="p">
+<template data-if="p.on"><button type="button" role="radio" aria-checked="true" onClick="{{p.pick}}" style="text-align: left; min-height: 64px; padding: 14px 16px; border-radius: 14px; font: inherit; cursor: pointer; background: #2A2414; color: #FFFFFF; border: 2px solid #F2B544;"><b>{{p.t}}</b><br><span style="color: #C9CFD8; font-size: 14px;">{{p.d}}</span></button></template>
+<template data-if="p.off"><button type="button" role="radio" aria-checked="false" onClick="{{p.pick}}" style="text-align: left; min-height: 64px; padding: 14px 16px; border-radius: 14px; font: inherit; cursor: pointer; background: #161B23; color: #FFFFFF; border: 2px solid #262D39;"><b>{{p.t}}</b><br><span style="color: #8A93A1; font-size: 14px;">{{p.d}}</span></button></template>
+</template>
+</div>
+</template>
+
+<template data-if="s1">
+<h2 style="font-family: 'Unbounded', sans-serif; font-size: 22px; margin: 0 0 18px; color: #FFFFFF;">Какой автомобиль?</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 14px;">
+<label style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 6px; color: #C9CFD8; font-size: 14px;">Марка и модель
+<input type="text" value="{{car}}" onInput="{{setCar}}" placeholder="Например, Haval Jolion" style="background: #0E1116; border: 1px solid #39414F; border-radius: 10px; padding: 12px; color: #FFFFFF; font: inherit; font-size: 16px; min-height: 46px; box-sizing: border-box;"></label>
+<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px; color: #C9CFD8; font-size: 14px;">Год
+<input type="text" inputmode="numeric" value="{{year}}" onInput="{{setYear}}" placeholder="2022" style="background: #0E1116; border: 1px solid #39414F; border-radius: 10px; padding: 12px; color: #FFFFFF; font: inherit; font-size: 16px; min-height: 46px; box-sizing: border-box;"></label>
+</div>
+<div style="margin-top: 14px; color: #8A93A1; font-size: 14px;">Часто выбирают:</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+<template data-for="popular" data-as="m"><button type="button" onClick="{{m.pick}}" style="min-height: 40px; padding: 8px 14px; border-radius: 999px; font: inherit; font-size: 14px; cursor: pointer; background: #161B23; color: #E9ECF1; border: 1px solid #39414F;">{{m.t}}</button></template>
+</div>
+</template>
+
+<template data-if="s2">
+<h2 style="font-family: 'Unbounded', sans-serif; font-size: 22px; margin: 0 0 8px; color: #FFFFFF;">Фото фары</h2>
+<p style="color: #A9B1BD; margin: 0 0 18px;">2–3 снимка: фара целиком при включённом свете и крупно проблемное место.</p>
+<template data-if="noPhotos">
+<button type="button" onClick="{{addPhotos}}" style="width: 100%; min-height: 180px; border: 2px dashed #39414F; border-radius: 16px; background: #12161D; color: #C9CFD8; font: inherit; font-size: 16px; cursor: pointer;">＋ Добавить фото<br><span style="color: #8A93A1; font-size: 14px;">JPG, PNG, HEIC до 20 МБ</span></button>
+</template>
+<template data-if="hasPhotos">
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<template data-for="photos" data-as="ph"><img src="{{ph}}" alt="Загруженное фото фары" style="width: 180px; height: 130px; object-fit: cover; border-radius: 12px;"></template>
+</div>
+<div style="color: #7FD18B; margin-top: 12px; font-size: 15px;">✓ 3 фото загружено</div>
+</template>
+<div style="margin-top: 14px; color: #8A93A1; font-size: 14px;">Нет фото под рукой? Можно пропустить — мастер перезвонит и спросит.</div>
+</template>
+
+<template data-if="s3">
+<h2 style="font-family: 'Unbounded', sans-serif; font-size: 22px; margin: 0 0 18px; color: #FFFFFF;">Куда прислать оценку?</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 14px;">
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; color: #C9CFD8; font-size: 14px;">Имя
+<input type="text" value="{{name}}" onInput="{{setName}}" placeholder="Как к вам обращаться" style="background: #0E1116; border: 1px solid #39414F; border-radius: 10px; padding: 12px; color: #FFFFFF; font: inherit; font-size: 16px; min-height: 46px; box-sizing: border-box;"></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; color: #C9CFD8; font-size: 14px;">Телефон
+<input type="tel" value="{{phone}}" onInput="{{setPhone}}" placeholder="+7 (___) ___-__-__" style="background: #0E1116; border: 1px solid #39414F; border-radius: 10px; padding: 12px; color: #FFFFFF; font: inherit; font-size: 16px; min-height: 46px; box-sizing: border-box;"></label>
+</div>
+<div style="margin-top: 18px; color: #C9CFD8; font-size: 14px;">Удобный канал</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;" role="radiogroup">
+<template data-for="chans" data-as="c">
+<template data-if="c.on"><button type="button" role="radio" aria-checked="true" onClick="{{c.pick}}" style="min-height: 44px; padding: 10px 18px; border-radius: 999px; font: inherit; font-weight: 700; cursor: pointer; background: #F2B544; color: #1A1406; border: 1px solid #F2B544;">{{c.t}}</button></template>
+<template data-if="c.off"><button type="button" role="radio" aria-checked="false" onClick="{{c.pick}}" style="min-height: 44px; padding: 10px 18px; border-radius: 999px; font: inherit; font-weight: 700; cursor: pointer; background: #161B23; color: #E9ECF1; border: 1px solid #39414F;">{{c.t}}</button></template>
+</template>
+</div>
+<div style="margin-top: 18px; color: #C9CFD8; font-size: 14px;">Сразу записаться на осмотр (необязательно)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;" role="radiogroup">
+<template data-for="slots" data-as="s">
+<template data-if="s.on"><button type="button" role="radio" aria-checked="true" onClick="{{s.pick}}" style="min-height: 44px; padding: 8px 14px; border-radius: 10px; font: inherit; font-size: 14px; cursor: pointer; background: #F2B544; color: #1A1406; border: 1px solid #F2B544;">{{s.t}}</button></template>
+<template data-if="s.off"><button type="button" role="radio" aria-checked="false" onClick="{{s.pick}}" style="min-height: 44px; padding: 8px 14px; border-radius: 10px; font: inherit; font-size: 14px; cursor: pointer; background: #161B23; color: #E9ECF1; border: 1px solid #39414F;">{{s.t}}</button></template>
+</template>
+</div>
+</template>
+
+<template data-if="done">
+<div style="text-align: center; padding: 20px 0;">
+<div style="width: 72px; height: 72px; border-radius: 50%; background: #F2B544; color: #1A1406; font-size: 36px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;">✓</div>
+<h2 style="font-family: 'Unbounded', sans-serif; font-size: 26px; margin: 0 0 10px; color: #FFFFFF;">Заявка №4127 принята</h2>
+<p style="color: #C9CFD8; margin: 0 auto 22px; max-width: 520px;">{{summary}}</p>
+<div style="display: inline-flex; flex-direction: column; gap: 6px; text-align: left; background: #12161D; border: 1px solid #262D39; border-radius: 14px; padding: 18px 22px; color: #C9CFD8;">
+<div>Мастер ответит до <b style="color: #FFFFFF;">14:35</b> сегодня</div>
+<div>Канал: <b style="color: #FFFFFF;">{{chanName}}</b></div>
+<div>Осмотр: <b style="color: #FFFFFF;">{{slotName}}</b></div>
+</div>
+<div style="margin-top: 24px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+<a href="Cases.html" style="min-height: 48px; padding: 12px 22px; border-radius: 12px; border: 1px solid #39414F; color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; font-weight: 700;">Пока посмотреть работы</a>
+<button type="button" onClick="{{restart}}" style="min-height: 48px; padding: 12px 22px; border-radius: 12px; border: 1px solid #39414F; background: transparent; color: #C9CFD8; font: inherit; cursor: pointer;">Новая заявка</button>
+</div>
+</div>
+</template>
+
+<template data-if="notDone">
+<div style="display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; padding-top: 22px; border-top: 1px solid #262D39;">
+<template data-if="canBack"><button type="button" onClick="{{back}}" style="min-height: 48px; padding: 12px 22px; border-radius: 12px; border: 1px solid #39414F; background: transparent; color: #FFFFFF; font: inherit; font-weight: 700; cursor: pointer;">← Назад</button></template>
+<template data-if="noBack"><span></span></template>
+<button type="button" onClick="{{next}}" style="min-height: 48px; padding: 12px 28px; border-radius: 12px; border: none; background: #F2B544; color: #1A1406; font: inherit; font-weight: 700; font-size: 16px; cursor: pointer;">{{nextLabel}}</button>
+</div>
+</template>
+</div>
+</div>
+
+<aside style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+<div style="background: #181E27; border: 1px solid #262D39; border-radius: 18px; padding: 22px;">
+<div style="font-weight: 700; color: #FFFFFF; margin-bottom: 12px;">Что будет дальше</div>
+<template data-for="after" data-as="a"><div style="display: flex; gap: 10px; padding: 8px 0; color: #C9CFD8; font-size: 15px;"><span style="color: #F2B544; font-weight: 700;">{{a.n}}</span><span>{{a.t}}</span></div></template>
+</div>
+<div style="background: #181E27; border: 1px solid #262D39; border-radius: 18px; padding: 22px;">
+<div style="font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Быстрее в мессенджере</div>
+<div style="color: #A9B1BD; font-size: 15px; margin-bottom: 14px;">Отправьте фото прямо в Telegram или WhatsApp — средний ответ 9 минут.</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap;"><a href="#" style="min-height: 44px; padding: 10px 16px; border-radius: 10px; background: #229ED9; color: #FFFFFF; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center;">Telegram</a><a href="#" style="min-height: 44px; padding: 10px 16px; border-radius: 10px; background: #1FA855; color: #FFFFFF; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center;">WhatsApp</a></div>
+</div>
+<div style="color: #8A93A1; font-size: 13px;">Нажимая «Отправить», вы соглашаетесь с политикой обработки персональных данных.</div>
+</aside>
+</section>
+
+
+
+<footer style="font-family: 'Manrope', system-ui, sans-serif; background: #0A0D11; color: #A9B1BD; border-top: 1px solid #222833;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; font-size: 15px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<a href="Main.html" style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px; color: #FFFFFF; text-decoration: none;">RB<span style="color: #F2B544;">custom</span></a>
+<div>Мастерская по ремонту и улучшению автомобильной оптики. Санкт-Петербург, с 2019 года.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Ремонт</div>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Запотевает фара</a>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Трещина, ДТП</a>
+<a href="Repair.html" style="color: #A9B1BD; text-decoration: none;">Не горит LED и ДХО</a>
+<a href="Model.html" style="color: #A9B1BD; text-decoration: none;">Ремонт по маркам</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Компания</div>
+<a href="Upgrade.html" style="color: #A9B1BD; text-decoration: none;">Улучшение света</a>
+<a href="Mail.html" style="color: #A9B1BD; text-decoration: none;">Фары почтой</a>
+<a href="Business.html" style="color: #A9B1BD; text-decoration: none;">Для бизнеса</a>
+<a href="About.html" style="color: #A9B1BD; text-decoration: none;">Проверить гарантию</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="color: #FFFFFF; font-weight: 700;">Контакты</div>
+<a href="tel:+79117571001" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">+7 (911) 757-10-01</a>
+<div>пер. Детский, 5Д · м. Московские Ворота</div>
+<div>Пн–Сб 10:00–20:00</div>
+<a href="Quote.html" style="color: #F2B544; font-weight: 700;">Прислать фото фары</a>
+</div>
+</div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px 28px; border-top: 1px solid #1B2029; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 13px; color: #7E8794;">
+<div>ИП Родионов И. Г. · ИНН 614881501717</div>
+<div>Политика обработки персональных данных · Публичная оферта</div>
+<div>Фото на сайте: Unsplash (тестовые)</div>
+</div>
+</footer>
+
+</div>
+</template>
+<div id="root"></div>
+<script>
+
+class DCLogic{constructor(p){this.props=p||{};this.state={}}setState(o){Object.assign(this.state,o);if(!window.__noRender)render()}}
+const get=(p,s)=>{p=p.trim();if(p==='true')return true;if(p==='false')return false;return p.split('.').reduce((o,k)=>o==null?o:o[k],s)};
+const one=/^\{\{\s*([\w.]+)\s*\}\}$/;
+const interp=(t,s)=>t.replace(/\{\{\s*([\w.]+)\s*\}\}/g,(m,p)=>{const v=get(p,s);return v==null?'':v});
+function walk(src,s,out){for(const n of src.childNodes){
+ if(n.nodeType===3){out.appendChild(document.createTextNode(n.data.includes('{{')?interp(n.data,s):n.data));continue}
+ if(n.nodeType!==1)continue;
+ if(n.tagName==='TEMPLATE'&&n.dataset.for!==undefined){const list=get(n.dataset.for,s)||[];for(const it of list){walk(n.content,Object.assign({},s,{[n.dataset.as]:it}),out)}continue}
+ if(n.tagName==='TEMPLATE'&&n.dataset.if!==undefined){if(get(n.dataset.if,s))walk(n.content,s,out);continue}
+ const el=document.createElement(n.tagName.toLowerCase());
+ for(const a of n.attributes){const m=a.value.match(one);
+  if(a.name.startsWith('on')&&m){const fn=get(m[1],s);const ev=a.name.slice(2);if(typeof fn==='function'){el.addEventListener(ev==='change'?'change':ev,e=>{if(ev==='input'){window.__noRender=true;fn(e);window.__noRender=false}else fn(e)})}continue}
+  if(a.name.startsWith('hint-'))continue;
+  el.setAttribute(a.name,a.value.includes('{{')?interp(a.value,s):a.value)}
+ walk(n.content||n,s,el);
+ if(el.tagName==='INPUT'&&el.hasAttribute('value'))el.value=el.getAttribute('value');
+ out.appendChild(el)}}
+let comp;
+function render(){const root=document.getElementById('root');const sels=[...root.querySelectorAll('select')].map(x=>x.value);const y=window.scrollY;
+ const frag=document.createDocumentFragment();walk(document.getElementById('page').content,comp.renderVals(),frag);root.replaceChildren(frag);
+ [...root.querySelectorAll('select')].forEach((x,i)=>{if(sels[i]!==undefined)x.value=sels[i]});window.scrollTo(0,y)}
+
+
+class Component extends DCLogic {
+constructor(p) { super(p); this.state = { step: 0, prob: 0, car: '', year: '', photos: false, name: '', phone: '', chan: 0, slot: -1 }; }
+renderVals() {
+const st = this.state;
+const P = [
+{ t: 'Запотевает', d: 'Конденсат или вода внутри' },
+{ t: 'Не горит секция', d: 'ДХО, LED, поворотник' },
+{ t: 'Разбита после ДТП', d: 'Стекло, корпус, крепления' },
+{ t: 'Светит тускло', d: 'Мутные линзы, плохой свет' },
+{ t: 'Мутное стекло', d: 'Нужна полировка' },
+{ t: 'Другое', d: 'Опишем по фото' }
+];
+const CH = ['Telegram', 'WhatsApp', 'Звонок'];
+const SL = ['Сегодня 17:00', 'Завтра 10:00', 'Завтра 12:30', 'Завтра 16:00', 'Пт 11:00', 'Сб 13:00'];
+const labels = ['Поломка', 'Авто', 'Фото', 'Контакты'];
+const imgs = ['img/hl1.jpg', 'img/night.jpg', 'img/hl2.jpg'];
+const carName = (st.car || 'автомобиль') + (st.year ? ' ' + st.year : '');
+return {
+bar: labels.map((l, i) => ({ label: (i + 1) + '. ' + l, on: i <= st.step, off: i > st.step })),
+s0: st.step === 0, s1: st.step === 1, s2: st.step === 2, s3: st.step === 3,
+done: st.step === 4, notDone: st.step < 4,
+canBack: st.step > 0 && st.step < 4, noBack: st.step === 0,
+nextLabel: st.step === 3 ? 'Отправить' : (st.step === 2 && !st.photos ? 'Пропустить' : 'Далее →'),
+next: () => this.setState({ step: Math.min(4, st.step + 1) }),
+back: () => this.setState({ step: Math.max(0, st.step - 1) }),
+restart: () => this.setState({ step: 0, prob: 0, car: '', year: '', photos: false, name: '', phone: '', chan: 0, slot: -1 }),
+probs: P.map((x, i) => ({ t: x.t, d: x.d, on: i === st.prob, off: i !== st.prob, pick: () => this.setState({ prob: i }) })),
+car: st.car, year: st.year,
+setCar: (e) => this.setState({ car: e.target.value }),
+setYear: (e) => this.setState({ year: e.target.value }),
+popular: ['Haval Jolion', 'Geely Monjaro', 'Chery Tiggo 7 Pro', 'Toyota RAV4', 'Kia Sportage', 'Lixiang L7'].map((m) => ({ t: m, pick: () => this.setState({ car: m }) })),
+noPhotos: !st.photos, hasPhotos: st.photos, photos: imgs,
+addPhotos: () => this.setState({ photos: true }),
+name: st.name, phone: st.phone,
+setName: (e) => this.setState({ name: e.target.value }),
+setPhone: (e) => this.setState({ phone: e.target.value }),
+chans: CH.map((c, i) => ({ t: c, on: i === st.chan, off: i !== st.chan, pick: () => this.setState({ chan: i }) })),
+slots: SL.map((s, i) => ({ t: s, on: i === st.slot, off: i !== st.slot, pick: () => this.setState({ slot: i }) })),
+summary: (st.name ? st.name + ', мы' : 'Мы') + ' получили заявку: «' + P[st.prob].t.toLowerCase() + '», ' + carName + (st.photos ? ', 3 фото.' : ', без фото.'),
+chanName: CH[st.chan],
+slotName: st.slot >= 0 ? SL[st.slot] : 'после оценки',
+after: [
+{ n: '1', t: 'Мастер смотрит фото и называет цену под ключ' },
+{ n: '2', t: 'Бронируем запчасть и время в мастерской' },
+{ n: '3', t: 'Ремонт за 1 день, видео процесса в чат' },
+{ n: '4', t: 'Гарантийный сертификат на 12 месяцев' }
+]
+};
+}
+}
+
+comp=new Component({});render();
+</script>
+</body>
+</html>
